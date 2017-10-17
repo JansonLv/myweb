@@ -8,18 +8,22 @@ $(function(){
 
 
 	$('#user_name').blur(function() {
+		$('.error_tip_info').hide();
 		check_user_name();
 	});
 
 	$('#user_pwd2').blur(function() {
+		$('.error_tip_info').hide();
 		check_pwd();
 	});
 
 	$('#user_pwd1').blur(function() {
+		$('.error_tip_info').hide();
 		check_cpwd();
 	});
 
 	$('#user_email').blur(function() {
+		$('.error_tip_info').hide();
 		check_email();
 	});
 
@@ -40,10 +44,9 @@ $(function(){
 
 	function check_user_name(){
 		var len = $('#user_name').val().length;
-		alert(len)
 		if(len<5||len>20)
 		{
-			$('#user_name').next().html('请输入5-20个字符的用户名')
+			$('#user_name').next().html('请输入5-20个字符的用户名');
 			$('#user_name').next().show();
 			error_name = true;
 		}
@@ -107,6 +110,7 @@ $(function(){
 
 
 	$('#reg_form').submit(function() {
+		$('.error_tip_info').hide();
 		check_user_name();
 		check_pwd();
 		check_cpwd();

@@ -8,7 +8,7 @@ urlpatterns = [
     url(r'^info/$', info, name='info'),
     url(r'^order/$', order, name='order'),
     url(r'^site/$', site, name='site'),
-    url(r'^register/deal_register/', deal_register, name='deal_register'),
+    url(r'^deal_register/', deal_register, name='deal_register'),
 ]
 
 

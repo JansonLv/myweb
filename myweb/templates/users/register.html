@@ -23,39 +23,39 @@
 			</div>
 
 			<div class="reg_form clearfix">
-				<form action="{% url 'users:deal_register' %}" method="post">
+				<form id="reg_form" action="{% url 'users:deal_register' %}" method="post">
 				<ul>
                     {% csrf_token %}
 					<li>
                         <label>用户名:</label>
 						<input type="text" name="user_name" id="user_name">
 						<span class="error_tip">提示信息</span>
-                        <span class="error_mess">{{ error_mess.user_name }}</span>
+                        <span class="error_tip_info">{{ error_mess.user_name }}</span>
 					</li>					
 					<li>
 						<label>密码:</label>
 						<input type="password" name="user_pwd1" id="user_pwd1">
 						<span class="error_tip">提示信息</span>
-                        <span class="error_mess">{{ error_mess.user_pwd1 }}</span>
+                        <span class="error_tip_info">{{ error_mess.user_pwd1 }}</span>
 
 					</li>
 					<li>
 						<label>确认密码:</label>
 						<input type="password" name="user_pwd2" id="user_pwd2">
 						<span class="error_tip">提示信息</span>
-                        <span class="error_mess">{{ error_mess.user_pwd2 }}</span>
+                        <span class="error_tip_info">{{ error_mess.user_pwd2 }}</span>
 					</li>
 					<li>
 						<label>邮箱:</label>
 						<input type="text" name="user_email" id="user_email">
 						<span class="error_tip">提示信息</span>
-                        <span class="error_mess">{{ error_mess.user_email }}</span>
+                        <span class="error_tip_info">{{ error_mess.user_email }}</span>
 					</li>
 					<li class="agreement">
 						<input type="checkbox" name="user_allow" id="user_allow" checked="checked">
 						<label>同意”天天生鲜用户使用协议“</label>
 						<span class="error_tip2">提示信息</span>
-                        <span class="error_mess">{{ error_mess.user_allow }}</span>
+                        <span class="error_tip_info">{{ error_mess.user_allow }}</span>
 					</li>
 					<li class="reg_sub">
 						<input type="submit" value="注 册" name="">
